@@ -1,2 +1,3 @@
 # ChatApp
-Created with CodeSandbox
+
+'''made with react.js styled components'''
