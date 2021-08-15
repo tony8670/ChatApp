@@ -1,18 +1,22 @@
+import {useContext} from 'react'
 import styled from "styled-components";
 import { Avatar, Container } from "@mantine/core";
 import { BsSearch } from "react-icons/bs";
 import { TiContacts } from "react-icons/ti";
 import { IoMdAnalytics, IoMdSettings } from "react-icons/io";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../utils/firebase";
 
 const Appbar = () => {
+  const [user, loading] = useAuthState(auth);
   return (
     <Sidebar>
       <Con>
-        <Avatar color="black" radius="xl" />
+        <Avatar src={user.photoURL} color="black" radius="xl" />
         <h3
           style={{ fontSize: "16px", fontFamily: "bold", color: "whitesmoke" }}
         >
-          Arindam Roy
+          { user.displayName }
         </h3>
       </Con>
       <IconWrapper>

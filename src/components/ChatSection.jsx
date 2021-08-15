@@ -13,7 +13,7 @@ const ChatSection = () => {
         </Name>
         <BsThreeDots size={25} color={"whitesmoke"} />
       </Con>
-      <Chat></Chat>
+      <Chat></Chat> 
       <InputWrapper>
         <Text placeholder="type your message" />
       </InputWrapper>
@@ -42,6 +42,7 @@ const Con = styled(Container)`
 const Chat = styled(Container)`
   height: auto;
 `;
+const InputWrapper = styled.div``;   
 
 const Name = styled.div`
   display: grid;
@@ -50,16 +51,15 @@ const Name = styled.div`
   cursor: pointer;
 `;
 
-const InputWrapper = styled.div``;
 
 const Text = styled.input`
   width: 100%;
-  padding: 20px 250px;
+  padding: 20px 250px;   
   background: none;
   border-radius: 15px;
   color: white;
   border-color: #885ed9;
-  outline: none;
+  outline: none;   
   font-size: 20px;
 `;
 
